@@ -1,0 +1,350 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: #0f0f0f;
+    color: #e0e0e0;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+/* Шапка */
+header {
+    text-align: center;
+    padding: 50px 0 40px;
+    border-bottom: 1px solid #222;
+}
+
+header h1 {
+    font-size: 2.5em;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+header p {
+    color: #888;
+    font-size: 1.1em;
+}
+
+.badge {
+    display: inline-block;
+    background: #1a1a1a;
+    border: 1px solid #333;
+    border-radius: 20px;
+    padding: 6px 16px;
+    font-size: 0.85em;
+    color: #aaa;
+    margin-top: 15px;
+}
+
+/* Кнопка оплаты наверху */
+.hero-cta {
+    margin-top: 35px;
+}
+
+.btn-hero {
+    font-size: 1.3em;
+    padding: 20px 60px;
+    border-radius: 12px;
+    box-shadow: 0 0 30px rgba(74, 222, 128, 0.25);
+}
+
+.payment-note {
+    color: #555;
+    margin-top: 14px;
+    font-size: 0.85em;
+}
+
+/* Секции */
+section {
+    padding: 50px 0;
+    border-bottom: 1px solid #1a1a1a;
+}
+
+h2 {
+    font-size: 1.6em;
+    color: #fff;
+    margin-bottom: 25px;
+}
+
+.about-text {
+    color: #aaa;
+    max-width: 650px;
+}
+
+/* Портфолио */
+.portfolio-placeholder {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 12px;
+}
+
+.portfolio-placeholder div {
+    background: #161616;
+    border: 1px dashed #333;
+    border-radius: 10px;
+    height: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #444;
+    font-size: 0.9em;
+}
+
+.portfolio-note {
+    color: #666;
+    margin-top: 15px;
+    font-size: 0.9em;
+}
+
+.portfolio-note a {
+    color: #4ade80;
+    text-decoration: none;
+}
+
+/* Блок услуг */
+.services-block {
+    background: #141414;
+    border: 1px solid #222;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.services-block summary {
+    padding: 22px 28px;
+    cursor: pointer;
+    font-size: 1.15em;
+    font-weight: 600;
+    color: #fff;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: background 0.2s;
+}
+
+.services-block summary:hover {
+    background: #191919;
+}
+
+.services-block summary::-webkit-details-marker {
+    display: none;
+}
+
+.services-block summary::after {
+    content: '+';
+    color: #4ade80;
+    font-size: 1.6em;
+    font-weight: 300;
+    line-height: 1;
+    transition: transform 0.2s;
+}
+
+.services-block[open] summary::after {
+    content: '−';
+}
+
+/* Сетка услуг: 3 в ряд */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+    padding: 0 24px 20px;
+    border-top: 1px solid #222;
+    padding-top: 24px;
+}
+
+.service-card {
+    background: #1a1a1a;
+    border: 1px solid #262626;
+    border-radius: 10px;
+    padding: 20px 18px;
+    transition: border-color 0.2s;
+}
+
+.service-card:hover {
+    border-color: #4ade80;
+}
+
+.service-card h3 {
+    color: #fff;
+    font-size: 1em;
+    margin-bottom: 14px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #262626;
+    line-height: 1.3;
+}
+
+.service-card ul {
+    list-style: none;
+}
+
+.service-card ul li {
+    color: #999;
+    font-size: 0.88em;
+    padding: 5px 0;
+    line-height: 1.4;
+}
+
+.service-card ul li strong {
+    color: #4ade80;
+    font-weight: 500;
+}
+
+.price-note-final {
+    color: #888;
+    font-size: 0.9em;
+    margin: 0 24px 20px;
+    padding: 14px 18px;
+    background: #111;
+    border-left: 3px solid #4ade80;
+    border-radius: 4px;
+}
+
+/* Кнопка */
+.btn {
+    display: inline-block;
+    background: #4ade80;
+    color: #0f0f0f;
+    padding: 14px 32px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1em;
+    transition: opacity 0.2s, transform 0.1s;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
+}
+
+/* Контакты */
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.contact-item {
+    background: #161616;
+    border: 1px solid #222;
+    border-radius: 10px;
+    padding: 18px;
+    text-align: center;
+    text-decoration: none;
+    transition: border-color 0.2s;
+    display: block;
+}
+
+a.contact-item:hover {
+    border-color: #4ade80;
+}
+
+.contact-item .label {
+    color: #666;
+    font-size: 0.85em;
+    margin-bottom: 5px;
+}
+
+.contact-item .value {
+    color: #fff;
+    font-weight: 500;
+}
+
+/* Подвал */
+footer {
+    padding: 40px 0 20px;
+    text-align: center;
+}
+
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px 16px;
+    margin-bottom: 30px;
+}
+
+.footer-links a {
+    color: #4ade80;
+    text-decoration: none;
+    font-size: 0.9em;
+    transition: opacity 0.2s;
+}
+
+.footer-links a:hover {
+    opacity: 0.7;
+}
+
+.legal {
+    background: #111;
+    border: 1px solid #1a1a1a;
+    border-radius: 10px;
+    padding: 20px 24px;
+    font-size: 0.82em;
+    color: #777;
+    text-align: left;
+    max-width: 600px;
+    margin: 0 auto 20px;
+}
+
+.legal p {
+    margin-bottom: 5px;
+}
+
+.legal span {
+    color: #999;
+}
+
+.footer-legal-links {
+    margin-bottom: 20px;
+}
+
+.footer-legal-links a {
+    color: #666;
+    text-decoration: none;
+    font-size: 0.85em;
+    margin: 0 10px;
+    transition: color 0.2s;
+}
+
+.footer-legal-links a:hover {
+    color: #4ade80;
+}
+
+.copyright {
+    color: #444;
+    font-size: 0.8em;
+}
+
+/* Адаптив для мобилки */
+@media (max-width: 720px) {
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+    .btn-hero {
+        font-size: 1.1em;
+        padding: 16px 40px;
+    }
+    header h1 {
+        font-size: 2em;
+    }
+}
