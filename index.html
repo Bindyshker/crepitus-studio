@@ -15,6 +15,7 @@
     </script>
 </head>
 <body>
+<canvas id="fire-bg" class="fire-bg" aria-hidden="true"></canvas>
 
 <div class="page-wrapper">
 
@@ -220,7 +221,7 @@
 </div>
 
 <script>
-    /* Переключение темы */
+    /* Переключение темы — ОДИН блок, без дубликатов */
     (function () {
         var btn = document.getElementById('theme-toggle');
         if (!btn) return;
@@ -232,6 +233,8 @@
         });
     })();
 </script>
+
+<script src="fire.js"></script>
 
 </body>
 </html>

@@ -685,6 +685,38 @@ footer {
     }
 }
 
+/* =========================================
+   АНИМИРОВАННЫЙ ФОН (зелёные квадраты)
+   ========================================= */
+.fire-bg {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;   /* не мешает кликам */
+    z-index: 0;             /* под контентом */
+    display: block;
+}
+
+/* В светлой теме огонь выключен */
+[data-theme="light"] .fire-bg {
+    display: none;
+}
+
+/* Контент — поверх канваса */
+.page-wrapper {
+    position: relative;
+    z-index: 1;
+}
+
+/* Скрыть при печати и при системной настройке «меньше движения» */
+@media print {
+    .fire-bg { display: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+    .fire-bg { display: none; }
+}
+
 @media (max-width: 480px) {
     html {
         scroll-padding-top: 70px;   /* топбар ниже на мобилке */
